@@ -30,7 +30,6 @@
       }
     },
     "plugins": [
-      "react-native-reanimated",
       "expo-notifications",
       "expo-av"
     ]
