@@ -5,7 +5,7 @@ Um sistema completo de monitoramento de treinos focado em glúteos e pernas, int
 
 ### Funcionalidades
 - **App Android**: Monitoramento de séries, timer de descanso, alarmes de treino (05:50) e integração com Galaxy Watch (Frequência Cardíaca).
-- **Backend VPS**: Servidor centralizado para armazenamento de dados e métricas em `82.112.245.99`.
+- **Backend VPS**: Servidor centralizado para armazenamento de dados e métricas em `YOUR_VPS_IP`.
 - **Dashboard Web**: Visualização de progresso com design "Cybersecurity/Fluent UI".
 
 ### Instalação

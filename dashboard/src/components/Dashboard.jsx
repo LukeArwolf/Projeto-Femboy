@@ -22,7 +22,7 @@ const Dashboard = () => {
                 <div className="flex gap-4">
                     <div className="glass-card flex items-center py-2 px-4">
                         <span className="status-indicator status-online"></span>
-                        <span className="text-xs font-mono uppercase tracking-widest text-white/60">Servidor: 82.112.245.99</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-white/60">Servidor: {import.meta.env.VITE_VPS_IP || 'C2_SECURE'}</span>
                     </div>
                 </div>
             </header>
