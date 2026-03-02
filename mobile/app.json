@@ -28,6 +28,11 @@
       "eas": {
         "projectId": "570c4b6b-0897-4617-9172-9f1897bc6420"
       }
-    }
+    },
+    "plugins": [
+      "react-native-reanimated",
+      "expo-notifications",
+      "expo-av"
+    ]
   }
 }
