@@ -1,28 +1,33 @@
 {
-    "expo": {
-        "name": "Projeto Femboy",
-        "slug": "projeto-femboy",
-        "version": "1.0.0",
-        "orientation": "portrait",
-        "icon": "./assets/icon.png",
-        "userInterfaceStyle": "dark",
-        "splash": {
-            "image": "./assets/splash.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#0a0a0a"
-        },
-        "assetBundlePatterns": [
-            "**/*"
-        ],
-        "ios": {
-            "supportsTablet": true
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#0a0a0a"
-            },
-            "package": "com.lukearwolf.projetofemboy"
-        }
+  "expo": {
+    "name": "Projeto Femboy",
+    "slug": "projeto-femboy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.lukearwolf.projetofemboy"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "570c4b6b-0897-4617-9172-9f1897bc6420"
+      }
     }
+  }
 }
