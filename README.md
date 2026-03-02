@@ -5,7 +5,7 @@ Um sistema completo de monitoramento de treinos focado em glúteos e pernas, int
 
 ### Funcionalidades
 - **App Android**: Monitoramento de séries, timer de descanso, alarmes de treino (05:50) e integração com Galaxy Watch (Frequência Cardíaca).
-- **Backend VPS**: Servidor centralizado para armazenamento de dados e métricas em `YOUR_VPS_IP`.
+- **Backend VPS**: Servidor centralizado para armazenamento de dados e métricas integrado via C2.
 - **Dashboard Web**: Visualização de progresso com design "Cybersecurity/Fluent UI".
 
 ### Instalação
@@ -22,7 +22,7 @@ A complete workout monitoring system focused on glutes and legs, integrated into
 
 ### Features
 - **Android App**: Set monitoring, rest timer, workout alarms (05:50) and Galaxy Watch integration (Heart Rate).
-- **VPS Backend**: Centralized server for data and metrics storage at `YOUR_VPS_IP`.
+- **VPS Backend**: Centralized server for data and metrics storage integrated via C2.
 - **Web Dashboard**: Progress visualization with "Cybersecurity/Fluent UI" design.
 
 ### Installation
