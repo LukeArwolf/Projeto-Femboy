@@ -3,6 +3,9 @@
         "preview": {
             "android": {
                 "buildType": "apk"
+            },
+            "env": {
+                "EXPO_PUBLIC_API_URL": "http://82.112.245.99:3000/api"
             }
         },
         "production": {}
