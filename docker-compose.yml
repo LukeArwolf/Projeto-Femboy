@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - VPS_IP=82.112.245.99
+      - DB_PATH=/app/data/fitness_c2.db
+      - JWT_SECRET=mudar_isse_no_servidor_123
+    volumes:
+      - ./backend/data:/app/data
+    restart: always
+
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "80:80"
+    environment:
+      - VITE_VPS_IP=82.112.245.99
+    restart: always
