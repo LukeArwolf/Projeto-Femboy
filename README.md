@@ -22,7 +22,7 @@ A complete workout monitoring system focused on glutes and legs, integrated into
 
 ### Features
 - **Android App**: Set monitoring, rest timer, workout alarms (05:50) and Galaxy Watch integration (Heart Rate).
-- **VPS Backend**: Centralized server for data and metrics storage at `82.112.245.99`.
+- **VPS Backend**: Centralized server for data and metrics storage at `YOUR_VPS_IP`.
 - **Web Dashboard**: Progress visualization with "Cybersecurity/Fluent UI" design.
 
 ### Installation
