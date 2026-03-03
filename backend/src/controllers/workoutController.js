@@ -46,3 +46,48 @@ exports.seedExercises = async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 };
+
+exports.getStreak = async (req, res) => {
+    try {
+        const { WorkoutLog } = require('../models');
+        const { Op } = require('sequelize');
+        const logs = await WorkoutLog.findAll({
+            attributes: ['workoutDate'],
+            order: [['workoutDate', 'DESC']],
+        });
+        let streak = 0;
+        let today = new Date();
+        today.setHours(0, 0, 0, 0);
+        for (let i = 0; i < 365; i++) {
+            const day = new Date(today);
+            day.setDate(today.getDate() - i);
+            const found = logs.some(l => {
+                const ld = new Date(l.workoutDate);
+                ld.setHours(0, 0, 0, 0);
+                return ld.getTime() === day.getTime();
+            });
+            if (found) streak++;
+            else if (i > 0) break;
+        }
+        res.json({ success: true, streak });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+};
+
+exports.getStats = async (req, res) => {
+    try {
+        const { WorkoutLog } = require('../models');
+        const { Op } = require('sequelize');
+        const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+        const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+        const [total, weekly, monthly] = await Promise.all([
+            WorkoutLog.count(),
+            WorkoutLog.count({ where: { workoutDate: { [Op.gte]: weekAgo } } }),
+            WorkoutLog.count({ where: { workoutDate: { [Op.gte]: monthAgo } } }),
+        ]);
+        res.json({ success: true, data: { total, weekly, monthly } });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+};

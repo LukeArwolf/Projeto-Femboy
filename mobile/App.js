@@ -1,32 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
-import WorkoutScreen from './src/screens/WorkoutScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import AppNavigator from './src/navigation/AppNavigator';
 import { registerForPushNotificationsAsync, scheduleWorkoutAlarm } from './src/utils/notifications';
-
-const MOCK_EXERCISE = {
-    name: 'Hip Thrust',
-    sets: 4,
-    reps: 10,
-    restTime: 60,
-};
 
 export default function App() {
     useEffect(() => {
-        registerForPushNotificationsAsync().then(() => scheduleWorkoutAlarm());
+        registerForPushNotificationsAsync()
+            .then(() => scheduleWorkoutAlarm())
+            .catch(() => { });
     }, []);
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaProvider>
             <StatusBar style="light" />
-            <WorkoutScreen exercise={MOCK_EXERCISE} />
-        </SafeAreaView>
+            <AppNavigator />
+        </SafeAreaProvider>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#0a0a0a',
-    },
-});
